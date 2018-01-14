@@ -50,12 +50,12 @@ function onTouchEnd(e) {
 	var ani = Ti.UI.createAnimation({});
 	ani.duration = 200;
 
-	if (true) {
+	if ($.view_card_front.rect.x < -50) {
 		// left
 		ani.left = -cardWidth * 2;
 		ani.addEventListener("complete", onCompleteAni);
-	} else if (false) {
-		// right    
+	} else if ($.view_card_front.rect.x > 150) {
+		// right
 		ani.left = WIDTH + cardWidth * 2;
 		ani.addEventListener("complete", onCompleteAni);
 	} else {
